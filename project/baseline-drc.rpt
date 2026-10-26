@@ -1,0 +1,45 @@
+** Drc report for intv-audio-line-driver.kicad_pcb **
+** Created on 2026-10-26T16:10:00 **
+** Report includes: Errors, Warnings **
+
+** Found 9 DRC violations **
+[lib_footprint_mismatch]: Footprint 'CP_Radial_D6.3mm_P2.50mm' does not match copy in library 'Capacitor_THT'
+    Local override; warning
+    @(94.0000 mm, 95.5000 mm): Footprint C3
+[text_thickness]: Text thickness out of range (TrueType font characters with insufficient stroke weight)
+    Rule: board setup constraints silk text thickness; warning
+    @(99.0000 mm, 71.0000 mm): PCB text 'cartheur' on F.Silkscreen
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6500 mm)
+    Rule: board setup constraints silk text height; warning
+    @(99.0000 mm, 86.5000 mm): Value field of J4 (AUDIO OUT)
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6500 mm)
+    Rule: board setup constraints silk text height; warning
+    @(99.0000 mm, 94.5000 mm): Value field of J7 (GND OUT)
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6500 mm)
+    Rule: board setup constraints silk text height; warning
+    @(70.5000 mm, 81.0000 mm): Value field of J1 (VIDEO IN)
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6500 mm)
+    Rule: board setup constraints silk text height; warning
+    @(70.5000 mm, 94.0000 mm): Value field of J6 (GND IN)
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6500 mm)
+    Rule: board setup constraints silk text height; warning
+    @(70.5000 mm, 75.0000 mm): Value field of J5 (+5V IN)
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6500 mm)
+    Rule: board setup constraints silk text height; warning
+    @(70.5000 mm, 87.5000 mm): Value field of J3 (AUDIO IN)
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.6500 mm)
+    Rule: board setup constraints silk text height; warning
+    @(99.0000 mm, 80.5000 mm): Value field of J2 (VIDEO OUT)
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

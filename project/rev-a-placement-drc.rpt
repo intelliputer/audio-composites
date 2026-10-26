@@ -1,0 +1,134 @@
+** Drc report for intv-audio-line-driver.kicad_pcb **
+** Created on 2026-10-26T16:13:47 **
+** Report includes: Errors, Warnings **
+
+** Found 0 DRC violations **
+
+** Found 29 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.0000 mm, 98.0000 mm): PTH pad 1 [+5V] of J4
+    @(58.0000 mm, 73.0000 mm): PTH pad 1 [+5V] of C5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(58.0000 mm, 65.0000 mm): PTH pad 1 [+5V] of C4
+    @(58.0000 mm, 73.0000 mm): PTH pad 1 [+5V] of C5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(68.0000 mm, 72.0000 mm): PTH pad 1 [+5V] of R1
+    @(58.0000 mm, 73.0000 mm): PTH pad 1 [+5V] of C5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(68.0000 mm, 72.0000 mm): PTH pad 1 [+5V] of R1
+    @(80.0000 mm, 72.0000 mm): PTH pad 1 [+5V] of R3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0000 mm, 72.0000 mm): PTH pad 1 [+5V] of R5
+    @(80.0000 mm, 72.0000 mm): PTH pad 1 [+5V] of R3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(108.0000 mm, 72.0000 mm): PTH pad 1 [+5V] of R7
+    @(94.0000 mm, 72.0000 mm): PTH pad 1 [+5V] of R5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(89.5000 mm, 82.0000 mm): PTH pad 2 [Q2_BASE] of C2
+    @(97.2700 mm, 82.0000 mm): PTH pad 2 [Q2_BASE] of Q2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0000 mm, 104.0000 mm): PTH pad 1 [Q2_BASE] of R6
+    @(97.2700 mm, 82.0000 mm): PTH pad 2 [Q2_BASE] of Q2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.2700 mm, 82.0000 mm): PTH pad 2 [Q2_BASE] of Q2
+    @(94.0000 mm, 61.8400 mm): PTH pad 2 [Q2_BASE] of R5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(106.5000 mm, 82.0000 mm): PTH pad 2 [AUDIO_BUS] of C3
+    @(116.0000 mm, 86.0000 mm): PTH pad 1 [AUDIO_BUS] of R10
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(116.0000 mm, 86.0000 mm): PTH pad 1 [AUDIO_BUS] of R10
+    @(116.0000 mm, 74.0000 mm): PTH pad 1 [AUDIO_BUS] of R9
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.1600 mm, 86.0000 mm): PTH pad 2 [RIGHT_OUT] of R10
+    @(131.0000 mm, 86.0000 mm): PTH pad 1 [RIGHT_OUT] of J3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.5400 mm, 82.0000 mm): PTH pad 3 [Q2_COL] of Q2
+    @(108.0000 mm, 61.8400 mm): PTH pad 2 [Q2_COL] of R7
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.5000 mm, 82.0000 mm): PTH pad 2 [Q1_BASE] of C1
+    @(79.2700 mm, 82.0000 mm): PTH pad 2 [Q1_BASE] of Q1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(62.5000 mm, 82.0000 mm): PTH pad 2 [Q1_BASE] of C1
+    @(68.0000 mm, 104.0000 mm): PTH pad 1 [Q1_BASE] of R2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(68.0000 mm, 61.8400 mm): PTH pad 2 [Q1_BASE] of R1
+    @(62.5000 mm, 82.0000 mm): PTH pad 2 [Q1_BASE] of C1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.0000 mm, 106.0000 mm): PTH pad 1 [GND] of J5
+    @(68.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(60.5000 mm, 65.0000 mm): PTH pad 2 [GND] of C4
+    @(60.5000 mm, 73.0000 mm): PTH pad 2 [GND] of C5
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(60.5000 mm, 73.0000 mm): PTH pad 2 [GND] of C5
+    @(68.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(68.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R2
+    @(80.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R6
+    @(80.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R4
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(108.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R8
+    @(94.0000 mm, 93.8400 mm): PTH pad 2 [GND] of R6
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(104.0000 mm, 82.0000 mm): PTH pad 1 [Q2_EM] of C3
+    @(96.0000 mm, 82.0000 mm): PTH pad 1 [Q2_EM] of Q2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(108.0000 mm, 104.0000 mm): PTH pad 1 [Q2_EM] of R8
+    @(104.0000 mm, 82.0000 mm): PTH pad 1 [Q2_EM] of C3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.0000 mm, 80.0000 mm): PTH pad 1 [AUD_IN] of J1
+    @(60.0000 mm, 82.0000 mm): PTH pad 1 [AUD_IN] of C1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.0000 mm, 61.8400 mm): PTH pad 2 [Q1_COL] of R3
+    @(80.5400 mm, 82.0000 mm): PTH pad 3 [Q1_COL] of Q1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.5400 mm, 82.0000 mm): PTH pad 3 [Q1_COL] of Q1
+    @(87.0000 mm, 82.0000 mm): PTH pad 1 [Q1_COL] of C2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.1600 mm, 74.0000 mm): PTH pad 2 [LEFT_OUT] of R9
+    @(131.0000 mm, 74.0000 mm): PTH pad 1 [LEFT_OUT] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(78.0000 mm, 82.0000 mm): PTH pad 1 [Q1_EM] of Q1
+    @(80.0000 mm, 104.0000 mm): PTH pad 1 [Q1_EM] of R4
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
