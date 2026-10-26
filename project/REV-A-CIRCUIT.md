@@ -4,8 +4,8 @@
 
 The files named `intv-audio-line-driver.*` are the working KiCad project.
 They were copied from the historical composite-video board as a mechanical
-starting point. The PCB has since been regenerated as the **placed, unrouted**
-Rev. A audio board from this circuit contract. The inherited schematic still
+starting point. The PCB has since been regenerated and routed as the Rev. A
+audio board from this circuit contract. The inherited schematic still
 describes the former video circuit and is not yet the authoritative source for
 the PCB.
 
@@ -16,9 +16,9 @@ reproducible placement generator is
 [`tools/generate_rev_a_pcb.py`](tools/generate_rev_a_pcb.py); it requires the
 KiCad Flatpak Python environment.
 
-The placement report (`rev-a-placement-drc.rpt`) records **zero physical DRC
-violations** and 29 expected unconnected items. Routing, a schematic rewrite,
-ERC, and final DRC are still mandatory before fabrication.
+The routing report (`rev-a-routing-drc.rpt`) records **zero DRC violations,
+zero unconnected pads, and zero footprint errors**. A schematic rewrite, ERC,
+and first-article validation are still mandatory before fabrication.
 
 ## Functional circuit
 
@@ -41,14 +41,28 @@ Q2 collector -- R7 (0 ohm link) -- +5V
 Q2 emitter ---- R8 -------- GND
 Q2 emitter ---- C3 ---- AUDIO_BUS
 
-AUDIO_BUS -- R5 -- LEFT_OUT
-AUDIO_BUS -- R6 -- RIGHT_OUT
+AUDIO_BUS -- R9 -- BUFFERED_AUD_OUT
 ```
 
 `Q1` is a low-current common-emitter voltage stage. `Q2` is a common-collector
 (emitter-follower) stage, providing a substantially lower output impedance than
-the raw console audio node. Both outputs carry the same original mono signal;
-the two 1 kOhm resistors keep left and right destination loads from interacting.
+the raw console audio node. `R9` supplies the buffered mono signal back to the
+video-composite board's audio-output connection.
+
+## Daughterboard interface
+
+Install this board beside the video-composite board with four short wires:
+
+| Daughterboard pad | Connect at the video/composite installation |
+| --- | --- |
+| `RAW AUD IN` | The console's original pre-RF audio tap. |
+| `BUFFERED AUD OUT` | The video board's former `AUD_OUT` / external-audio-jack connection. |
+| `+5V FROM VIDEO` | The regulated +5 V point used by the video board. |
+| `GND FROM VIDEO` | The video board signal-ground point. |
+
+Do **not** route the raw audio through the video board's original `C4`
+straight-through path. Leave that path disconnected (or omit C4) and route the
+new buffered-output wire to the external audio connector instead.
 
 ## Initial values
 
@@ -66,24 +80,24 @@ the two 1 kOhm resistors keep left and right destination loads from interacting.
 | R7 | 0 Ohm link | Connects Q2 collector directly to +5 V. |
 | R8 | 1 kOhm | Q2 emitter bias; nominal quiescent output about 1.8 V. |
 | C3 | 47–100 uF, >=10 V | Output DC blocking; positive terminal toward Q2 emitter. |
-| R9, R10 | 1 kOhm | New pads/footprints required: isolate left and right outputs. |
+| R9 | 1 kOhm | Output isolation between `AUDIO_BUS` and `BUFFERED AUD OUT`. |
 | C4 | 100 nF ceramic | New supply-decoupling footprint directly between +5 V and GND. |
 | C5 | 47–100 uF, >=10 V | New local supply bulk capacitor. |
 
-The two output resistors and decoupling capacitors are additions; therefore
+The output resistor and decoupling capacitors are additions; therefore
 this is not a drop-in value change to the inherited PCB.
 
 ## Required KiCad conversion work
 
-1. Rename connector functions to `AUD_IN`, `LEFT_OUT`, `RIGHT_OUT`, `+5V`, and
+1. Rename connector functions to `RAW_AUD_IN`, `BUFFERED_AUD_OUT`, `+5V`, and
    `GND`; remove video-only labels.
 2. Rewire C3 to the **Q2 emitter**, not the inherited Q2 collector node.
 3. Change Q2 from common-emitter to emitter-follower use by connecting its
    collector directly to +5 V through R7.
 4. Add R9/R10 at the output and C4/C5 next to the transistor supply pins.
-5. Redraw and route the PCB from the audio schematic; do not reuse inherited
-   copper as if it matched these nets.
-6. Run ERC and DRC in KiCad, then validate under a >=10 kOhm line load before
+5. Redraw the PCB from the audio schematic; do not reuse inherited copper as
+   if it matched these nets.
+6. Run ERC in KiCad, then validate under a >=10 kOhm line load before
    a fabrication release.
 
 ## First-article acceptance
